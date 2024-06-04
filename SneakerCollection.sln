@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sneaker.Api", "Sneaker.Api\Sneaker.Api.csproj", "{97F5FD63-22A6-4670-87B7-F771D9408A1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sneaker.Domain", "Sneaker.Domain\Sneaker.Domain.csproj", "{6468D020-68D6-450B-8AD2-6D97D4486C4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sneaker.Infrastructure", "Sneaker.Infrastructure\Sneaker.Infrastructure.csproj", "{BC6DBAD8-CC71-455A-AE46-6CC7DDC9494D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sneaker.Service", "Sneaker.Service\Sneaker.Service.csproj", "{E5C46B7E-5885-48D6-8B0D-308D0FE186B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97F5FD63-22A6-4670-87B7-F771D9408A1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97F5FD63-22A6-4670-87B7-F771D9408A1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97F5FD63-22A6-4670-87B7-F771D9408A1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97F5FD63-22A6-4670-87B7-F771D9408A1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6468D020-68D6-450B-8AD2-6D97D4486C4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6468D020-68D6-450B-8AD2-6D97D4486C4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6468D020-68D6-450B-8AD2-6D97D4486C4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6468D020-68D6-450B-8AD2-6D97D4486C4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC6DBAD8-CC71-455A-AE46-6CC7DDC9494D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC6DBAD8-CC71-455A-AE46-6CC7DDC9494D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC6DBAD8-CC71-455A-AE46-6CC7DDC9494D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC6DBAD8-CC71-455A-AE46-6CC7DDC9494D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5C46B7E-5885-48D6-8B0D-308D0FE186B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5C46B7E-5885-48D6-8B0D-308D0FE186B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5C46B7E-5885-48D6-8B0D-308D0FE186B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5C46B7E-5885-48D6-8B0D-308D0FE186B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
