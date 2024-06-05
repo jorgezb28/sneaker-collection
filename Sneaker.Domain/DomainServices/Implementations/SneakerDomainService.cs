@@ -10,7 +10,7 @@ public class SneakerDomainService : ISneakerDomainService
             return false;
         }
 
-        if (sneaker.Size.Value<0 && sneaker.Size.Value>30)
+        if (sneaker.Size.Value<=0 || sneaker.Size.Value>30)
         {
             return false;
         }
@@ -21,10 +21,5 @@ public class SneakerDomainService : ISneakerDomainService
         }
 
         return true;
-    }
-
-    public bool ValidateSneakerGeneralInfo(Entities.Sneaker sneaker)
-    {
-        throw new NotImplementedException();
     }
 }

@@ -1,5 +1,6 @@
 using System.Net;
 using AutoMapper;
+using Sneaker.Domain.DomainServices;
 using Sneaker.Domain.IRepository;
 using Sneaker.Service.DTOs.Requests;
 using Sneaker.Service.DTOs.Responses;
@@ -11,15 +12,18 @@ public class SneakerCollectionService : ISneakerCollectionService
     private readonly ISneakerRepository _sneakerRepository;
     private readonly IBrandRepository _brandRepository;
     private readonly ISizeRepository _sizeRepository;
+    private readonly ISneakerDomainService _sneakerDomainService;
     private readonly IMapper _mapper;
 
     public SneakerCollectionService(ISneakerRepository sneakerRepository, IMapper mapper, 
-        IBrandRepository brandRepository, ISizeRepository sizeRepository)
+        IBrandRepository brandRepository, ISizeRepository sizeRepository, 
+        ISneakerDomainService sneakerDomainService)
     {
         _sneakerRepository = sneakerRepository;
         _mapper = mapper;
         _brandRepository = brandRepository;
         _sizeRepository = sizeRepository;
+        _sneakerDomainService = sneakerDomainService;
     }
     public async Task<SneakerResponseDto> GetSneakerById(Guid id)
     {
@@ -95,6 +99,15 @@ public class SneakerCollectionService : ISneakerCollectionService
             sneakerToAdd.Brand =  await _brandRepository.FindBrandByName(newSneaker.Brand);
             sneakerToAdd.Size = await _sizeRepository.GetSizeByValue(newSneaker.Size);
 
+            if (!_sneakerDomainService.ValidateSneakerSize(sneakerToAdd))
+            {
+                return new SneakerResponseDto()
+                {
+                    StatusCode = (int)HttpStatusCode.BadRequest,
+                    ErrorMessage = "Sneaker size information is invalid."
+                };
+            }
+            
             var sneakerAdded = await _sneakerRepository.CreateSneaker(sneakerToAdd);
             var sneakerAddedDto =_mapper.Map<SneakerResponseDto>(sneakerAdded);
             sneakerAddedDto.StatusCode = (int)HttpStatusCode.OK;

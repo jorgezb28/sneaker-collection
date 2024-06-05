@@ -8,6 +8,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sneaker.Infrastructure", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sneaker.Service", "Sneaker.Service\Sneaker.Service.csproj", "{E5C46B7E-5885-48D6-8B0D-308D0FE186B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sneaker.Domain.Tests", "Sneaker.Domain.Tests\Sneaker.Domain.Tests.csproj", "{0CDB76D8-83C5-4A9E-AC2D-EA4554A24482}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sneaker.Service.Tests", "Sneaker.Service.Tests\Sneaker.Service.Tests.csproj", "{621EAEF4-65A8-4CC5-8090-ECE169CA77DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,13 @@ Global
 		{E5C46B7E-5885-48D6-8B0D-308D0FE186B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5C46B7E-5885-48D6-8B0D-308D0FE186B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5C46B7E-5885-48D6-8B0D-308D0FE186B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CDB76D8-83C5-4A9E-AC2D-EA4554A24482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CDB76D8-83C5-4A9E-AC2D-EA4554A24482}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CDB76D8-83C5-4A9E-AC2D-EA4554A24482}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CDB76D8-83C5-4A9E-AC2D-EA4554A24482}.Release|Any CPU.Build.0 = Release|Any CPU
+		{621EAEF4-65A8-4CC5-8090-ECE169CA77DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{621EAEF4-65A8-4CC5-8090-ECE169CA77DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{621EAEF4-65A8-4CC5-8090-ECE169CA77DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{621EAEF4-65A8-4CC5-8090-ECE169CA77DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

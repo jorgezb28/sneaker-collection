@@ -1,4 +1,6 @@
 using AutoMapper;
+using Sneaker.Domain.Entities;
+using Sneaker.Service.DTOs.Auth;
 using Sneaker.Service.DTOs.Requests;
 using Sneaker.Service.DTOs.Responses;
 
@@ -17,5 +19,10 @@ public class SneakerCollectionProfile :Profile
         CreateMap<SneakerRequestDto, Domain.Entities.Sneaker>()
             .ForMember(e => e.Brand, opt => opt.Ignore())
             .ForMember(e => e.Size, opt => opt.Ignore());
+        
+        CreateMap<UserDto, User>()
+            .ForMember(e => e.Email,
+                e => e.MapFrom(dto => dto.UserName))
+            .ReverseMap();
     }
 }

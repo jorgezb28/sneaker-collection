@@ -1,5 +1,6 @@
 using System.Net;
 using System.Text;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Sneaker.Domain.Excepetions;
 using Sneaker.Service.DTOs.Requests;
@@ -8,6 +9,7 @@ using Sneaker.Service.Services;
 
 namespace Sneaker.Api.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/sneaker/")]
 public class SneakerCollectionController : ControllerBase
